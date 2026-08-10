@@ -56,7 +56,10 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials">
+    <section
+      id="testimonials"
+      className="bg-white py-20 sm:py-24 lg:py-28"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Header + Image */}
@@ -98,7 +101,7 @@ export default function Testimonials() {
               </div>
 
               <span className="font-semibold text-neutral-900">
-                5.0 Google Rating
+                4.8 Google Rating
               </span>
 
               <span className="text-neutral-400">
@@ -106,7 +109,7 @@ export default function Testimonials() {
               </span>
 
               <span className="text-neutral-600">
-                69 reviews
+                129 reviews
               </span>
 
             </div>
@@ -123,7 +126,6 @@ export default function Testimonials() {
                 className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
               />
             </Link>
-
           </motion.div>
 
           {/* Image Slideshow */}
@@ -135,7 +137,6 @@ export default function Testimonials() {
             transition={{ duration: 0.8 }}
             className="relative h-[460px] overflow-hidden rounded-[28px] sm:h-[520px]"
           >
-
             <AnimatePresence mode="wait">
 
               <motion.div
@@ -157,7 +158,6 @@ export default function Testimonials() {
                 }}
                 className="absolute inset-0"
               >
-
                 <Image
                   src={slideshowImages[currentImage]}
                   alt="Kanata Legal Services"
@@ -165,20 +165,14 @@ export default function Testimonials() {
                   priority={currentImage === 0}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
-                  style={{
-                    objectPosition:
-                      currentImage === 0 ? "center 30%" : "center",
-                  }}
                 />
 
                 <div className="absolute inset-0 bg-black/10" />
-
               </motion.div>
 
             </AnimatePresence>
 
             <div className="pointer-events-none absolute inset-0 rounded-[28px] ring-1 ring-neutral-200" />
-
           </motion.div>
 
         </div>
@@ -221,6 +215,7 @@ export default function Testimonials() {
                 transition-all
                 duration-500
                 hover:border-red-600/40
+                hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)]
               "
             >
 
